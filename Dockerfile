@@ -1,4 +1,3 @@
-ARG PASSWORD=pass
 FROM nginx:latest
 RUN apk apt-get update -q && apt-get dist-upgrade -y && apt-get clean && apt-get autoclean && apt-get install openssl -y \
 	mkdir -p $WWW_PATH && chown nginx:nginx $WWW_PATH \
